@@ -1,0 +1,9 @@
+@model IEnumerable<Part>
+@{ ViewData["Title"]="Запчасти"; }
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>@ViewData["Title"]</h2>
+  <a class="btn btn-primary" asp-action="Create">+ Добавить запчасть</a>
+</div>
+<table class="table table-striped"><thead><tr><th>Название</th><th>SKU</th><th>Цена</th><th>Остаток</th></tr></thead><tbody>
+@foreach (var p in Model){ <tr><td>@p.Name</td><td>@p.Sku</td><td>@p.UnitPrice?.ToString("0.00")</td><td>@p.StockQty</td></tr> }
+</tbody></table>

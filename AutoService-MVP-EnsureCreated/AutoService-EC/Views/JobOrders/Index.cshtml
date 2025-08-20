@@ -1,0 +1,9 @@
+@model IEnumerable<JobOrder>
+@{ ViewData["Title"]="Работы"; }
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>@ViewData["Title"]</h2>
+  <a class="btn btn-primary" asp-action="Create">+ Новая работа</a>
+</div>
+<table class="table table-striped"><thead><tr><th>Название</th><th>ТС</th><th>Клиент</th><th>Статус</th><th>Итого</th><th></th></tr></thead><tbody>
+@foreach (var j in Model){ <tr><td>@j.Title</td><td>@($"{j.Vehicle?.Year} {j.Vehicle?.Make} {j.Vehicle?.Model}")</td><td>@j.Vehicle?.Customer?.FullName</td><td>@j.Status</td><td>@j.Total.ToString("0.00")</td><td><a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@j.Id">Открыть</a></td></tr> }
+</tbody></table>

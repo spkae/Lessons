@@ -1,0 +1,10 @@
+@model Part
+@{ ViewData["Title"]="Добавить запчасть"; }
+<h2>@ViewData["Title"]</h2>
+<form method="post"><div class="row g-3">
+<div class="col-md-6"><label class="form-label">Название</label><input asp-for="Name" class="form-control" /></div>
+<div class="col-md-3"><label class="form-label">SKU</label><input asp-for="Sku" class="form-control" /></div>
+<div class="col-md-3"><label class="form-label">Розн. цена</label><input asp-for="UnitPrice" class="form-control" /></div>
+<div class="col-md-3"><label class="form-label">Себестоимость</label><input asp-for="UnitCost" class="form-control" /></div>
+<div class="col-md-3"><label class="form-label">Остаток</label><input asp-for="StockQty" class="form-control" /></div>
+</div><div class="mt-3"><button class="btn btn-primary">Сохранить</button><a class="btn btn-outline-secondary" asp-action="Index">Отмена</a></div></form>

@@ -1,0 +1,10 @@
+@model Vehicle
+@{ ViewData["Title"]="Карточка ТС"; }
+<h2>@Model.Year @Model.Make @Model.Model</h2>
+<p><strong>VIN:</strong> @Model.Vin | <strong>Госномер:</strong> @Model.Plate</p>
+<p><strong>Клиент:</strong> @Model.Customer?.FullName (@Model.Customer?.Phone)</p>
+<h4 class="mt-4">Работы</h4>
+<p><a class="btn btn-primary" asp-controller="JobOrders" asp-action="Create" asp-route-vehicleId="@Model.Id">+ Добавить работу</a></p>
+<table class="table table-sm"><thead><tr><th>Название</th><th>Статус</th><th>Создано</th><th>Сумма</th><th></th></tr></thead><tbody>
+@foreach (var j in Model.Jobs){ <tr><td>@j.Title</td><td>@j.Status</td><td>@j.CreatedAt.ToLocalTime()</td><td>@j.Total.ToString("0.00")</td><td><a asp-controller="JobOrders" asp-action="Details" asp-route-id="@j.Id">Открыть</a></td></tr> }
+</tbody></table>
