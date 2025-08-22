@@ -1,0 +1,6 @@
+@{ var v = ViewBag.Vehicle as Vehicle; int? jobId = ViewBag.JobId as int?; }
+<h3>Новая форма для @v!.Year @v.Make @v.Model (@v.Plate)</h3>
+<a class="btn btn-primary" asp-action="Oceanex" asp-route-vehicleId="@v.Id" asp-route-jobId="@jobId">Oceanex PM/MVIC</a>
+@if (jobId != null) {
+  <a class="btn btn-outline-primary" asp-action="WorkSheet" asp-route-vehicleId="@v.Id" asp-route-jobId="@jobId">Blue Work Sheet</a>
+}

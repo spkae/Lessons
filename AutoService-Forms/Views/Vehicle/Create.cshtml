@@ -1,0 +1,59 @@
+﻿@model AutoService.Models.Vehicle
+@{
+    ViewData["Title"] = "Добавить ТС";
+    var customers = (IEnumerable<AutoService.Models.Customer>)ViewBag.Customers;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" class="mt-3">
+    <div class="row g-3">
+        <div class="col-md-3">
+            <label class="form-label">Марка</label>
+            <input asp-for="Make" class="form-control" required />
+            <span asp-validation-for="Make" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Модель</label>
+            <input asp-for="Model" class="form-control" required />
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+        <div class="col-md-2">
+            <label class="form-label">Год</label>
+            <input asp-for="Year" type="number" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Клиент</label>
+            <select asp-for="CustomerId" class="form-select" required>
+                <option value="">-- выберите клиента --</option>
+                @foreach (var c in customers)
+                {
+                    <option value="@c.Id">@c.FullName</option>
+                }
+            </select>
+            <small class="text-muted">
+                Нет клиента? Сначала добавьте его в разделе «Клиенты».
+            </small>
+            <span asp-validation-for="CustomerId" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-4">
+            <label class="form-label">VIN</label>
+            <input asp-for="Vin" class="form-control" />
+            <span asp-validation-for="Vin" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Госномер</label>
+            <input asp-for="Plate" class="form-control" />
+            <span asp-validation-for="Plate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-3">Сохранить</button>
+    <a class="btn btn-outline-secondary mt-3" asp-action="Index">Отмена</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

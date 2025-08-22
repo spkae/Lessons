@@ -1,0 +1,10 @@
+@model IEnumerable<Vehicle>
+@{ ViewData["Title"]="Транспортные средства"; }
+<h2>@ViewData["Title"]</h2>
+<table class="table table-striped"><thead><tr><th>Год</th><th>Марка</th><th>Модель</th><th>VIN</th><th>Госномер</th><th>Клиент</th><th></th></tr></thead><tbody>
+        <p>
+            <a class="btn btn-primary" asp-action="Create">Добавить ТС</a>
+        </p>
+
+@foreach (var v in Model){ <tr><td>@v.Year</td><td>@v.Make</td><td>@v.Model</td><td>@v.Vin</td><td>@v.Plate</td><td>@v.Customer?.FullName</td><td><a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@v.Id">Открыть</a></td></tr> }
+</tbody></table>

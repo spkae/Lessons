@@ -1,0 +1,7 @@
+@model FormEntry
+@{ ViewData["Title"] = "Форма: " + Model.Title; }
+<h3>@Model.Title</h3>
+<p><strong>Template:</strong> @Model.TemplateCode | <strong>Компания:</strong> @Model.Company</p>
+<p><strong>ТС:</strong> @Model.Vehicle?.Year @Model.Vehicle?.Make @Model.Vehicle?.Model (@Model.Vehicle?.Plate)</p>
+<a class="btn btn-success" href="/Forms/Pdf/@Model.Id">Скачать PDF</a>
+<pre class="mt-3">@Model.DataJson</pre>

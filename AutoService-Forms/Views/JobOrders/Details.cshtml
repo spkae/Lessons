@@ -1,0 +1,24 @@
+@model JobOrder
+@{ ViewData["Title"]="Заказ-работа: " + Model.Title; var parts = (IEnumerable<Part>)ViewBag.PartsList; }
+<h2>@ViewData["Title"]</h2>
+<div class="mb-3">
+    <strong>Авто:</strong> @Model.Vehicle?.Year @Model.Vehicle?.Make @Model.Vehicle?.Model<br /><strong>Клиент:</strong> @Model.Vehicle?.Customer?.FullName (@Model.Vehicle?.Customer?.Phone)
+    <br /><strong>Статус:</strong> @Model.Status
+</div>
+<a class="btn btn-success mb-3" href="/Invoices/Job/@Model.Id">Скачать PDF</a>
+<a class="btn btn-outline-primary mb-3" asp-controller="Forms" asp-action="New" asp-route-vehicleId="@Model.VehicleId" asp-route-jobId="@Model.Id">Новая форма</a>
+<h4>Запчасти</h4>
+<table class="table table-sm"><thead><tr><th>Запчасть</th><th>Кол-во</th><th>Цена</th><th>Сумма</th><th></th></tr></thead><tbody>
+@foreach (var jp in Model.Parts){ <tr><td>@jp.Part?.Name (@jp.Part?.Sku)</td><td>@jp.Quantity</td><td>@jp.UnitPrice.ToString("0.00")</td><td>@(jp.LineTotal.ToString("0.00"))</td><td><form asp-action="RemovePart" method="post" class="d-inline"><input type="hidden" name="id" value="@jp.Id" /><button class="btn btn-sm btn-outline-danger">Удалить</button></form></td></tr> }
+</tbody><tfoot><tr><th colspan="3" class="text-end">Итого запчасти:</th><th>@Model.PartsTotal.ToString("0.00")</th><th></th></tr></tfoot></table>
+<form asp-action="AddPart" method="post" class="row g-2">
+<input type="hidden" name="jobOrderId" value="@Model.Id" />
+<div class="col-md-6"><select name="partId" class="form-select" required><option value="">-- Запчасть --</option>
+@foreach (var p in parts){ <option value="@p.Id">@p.Name (@p.Sku)</option> }</select></div>
+<div class="col-md-2"><input name="quantity" type="number" class="form-control" min="1" value="1" /></div>
+<div class="col-md-2"><input name="unitPrice" type="number" step="0.01" class="form-control" placeholder="Цена (opt.)" /></div>
+<div class="col-md-2"><button class="btn btn-primary w-100">Добавить</button></div></form>
+<hr /><h4>Труд</h4><div>Часы: @Model.LaborHours, Ставка: @Model.LaborRate.ToString("0.00"), Сумма труда: @Model.LaborTotal.ToString("0.00")</div>
+@{ var rate = 0.15m; var subtotal = Model.Subtotal; var tax = Math.Round(subtotal*rate, 2); var total = subtotal + tax; }
+<h5 class="mt-3">Subtotal: @subtotal.ToString("0.00") | HST(15%): @tax.ToString("0.00") | <strong>TOTAL: @total.ToString("0.00")</strong></h5>
+<div class="mt-3"><a class="btn btn-outline-secondary" asp-controller="Vehicles" asp-action="Details" asp-route-id="@Model.VehicleId">К авто</a> <a class="btn btn-outline-secondary" asp-controller="JobOrders" asp-action="Index">К списку работ</a></div>

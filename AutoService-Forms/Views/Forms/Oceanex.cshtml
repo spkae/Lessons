@@ -1,0 +1,26 @@
+@{ var v = ViewBag.Vehicle as Vehicle; int? jobId = ViewBag.JobId as int?; }
+<h3>Oceanex – Preventive Maintenance / MVIC</h3>
+<form asp-action="OceanexSubmit" method="post">
+  <input type="hidden" name="vehicleId" value="@v!.Id" />
+  <input type="hidden" name="jobId" value="@jobId" />
+  <div class="row g-2">
+    <div class="col-md-3"><label class="form-label">Title</label><input name="title" class="form-control" value="PM/MVIC Inspection" /></div>
+    <div class="col-md-2"><label class="form-label">License Plate</label><input name="plate" class="form-control" value="@v.Plate" /></div>
+    <div class="col-md-2"><label class="form-label">VIN</label><input name="vin" class="form-control" value="@v.Vin" /></div>
+    <div class="col-md-3"><label class="form-label">Unit #</label><input name="unit" class="form-control" /></div>
+    <div class="col-md-2"><label class="form-label">KM</label><input name="km" class="form-control" /></div>
+  </div>
+  <h5 class="mt-3">Checklist (C/NC/R)</h5>
+  @{ string[] items = {"Tail Lights","Marker Lights","Reflectors","Air Hoses & Lines","Air Tanks & Bolts","Brake Operation","Axles & Seals","Door Hinges","Roof Skin","Panels & Rails","Grease Slider","Torque Studs/Nuts"}; string[] states = {"C","NC","R"}; }
+  <table class="table table-sm"><thead><tr><th>Description</th><th style="width:200px">State</th></tr></thead><tbody>
+  @for(int i=0;i<items.Length;i++){ <tr><td>@items[i]</td><td>@foreach (var s in states) {<label class="me-2"><input type="radio" name="chk_@i" value="@s" @(s=="C"?"checked":"") /> @s</label>} </td></tr> }
+  </tbody></table>
+  <div class="row g-2">
+    <div class="col-md-3"><label class="form-label">Next MVIC</label><input name="next_mvic" class="form-control" /></div>
+    <div class="col-md-3"><label class="form-label">Next Maintenance</label><input name="next_mtc" class="form-control" /></div>
+    <div class="col-md-3"><label class="form-label">Mechanic</label><input name="mechanic" class="form-control" /></div>
+    <div class="col-md-3"><label class="form-label">Employee #</label><input name="employee" class="form-control" /></div>
+  </div>
+  <div class="mt-3"><label class="form-label">Notes</label><textarea name="notes" class="form-control" rows="4"></textarea></div>
+  <button class="btn btn-primary mt-3">Сохранить</button>
+</form>

@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AutoService
+build_property.RootNamespace = AutoService
+build_property.ProjectDir = C:\Users\Jhon\Downloads\Telegram Desktop\AutoService-Forms (1)\AutoService-Forms\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Jhon\Downloads\Telegram Desktop\AutoService-Forms (1)\AutoService-Forms
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Forms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Forms/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Forms/Oceanex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcT2NlYW5leC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Forms/WorkSheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcV29ya1NoZWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/JobOrders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/JobOrders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Parts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Vehicle/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Vehicle/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/Vehicle/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhon/Downloads/Telegram Desktop/AutoService-Forms (1)/AutoService-Forms/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
