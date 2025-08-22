@@ -1,9 +1,0 @@
-@model IEnumerable<Customer>
-@{ ViewData["Title"]="Клиенты"; }
-<div class="d-flex justify-content-between align-items-center mb-3">
-  <h2>@ViewData["Title"]</h2>
-  <a class="btn btn-primary" asp-action="Create">+ Добавить клиента</a>
-</div>
-<table class="table table-striped"><thead><tr><th>Имя</th><th>Телефон</th><th>Email</th><th>Авто</th></tr></thead><tbody>
-@foreach (var c in Model){ <tr><td>@c.FullName</td><td>@c.Phone</td><td>@c.Email</td><td>@(c.Vehicles?.Count ?? 0)</td></tr> }
-</tbody></table>

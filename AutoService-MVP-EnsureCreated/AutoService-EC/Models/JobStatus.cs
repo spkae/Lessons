@@ -1,1 +1,0 @@
-namespace AutoService.Models; public enum JobStatus{ Planned=0, InProgress=1, Completed=2 }
